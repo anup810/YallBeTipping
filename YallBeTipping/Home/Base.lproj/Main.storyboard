@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NDB-cU-hOz">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -15,16 +15,95 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="HomeV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8pn-i6-oVW">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeTableCell" rowHeight="86" id="gxE-My-wDq" customClass="HomeTableCell" customModule="YallBeTipping" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gxE-My-wDq" id="Joa-wY-Lsj">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="zIs-Og-pVD">
+                                                    <rect key="frame" x="297" y="5" width="76" height="76"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="zIs-Og-pVD" secondAttribute="height" multiplier="1:1" id="3xu-mb-RZD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WDZ-Vr-mup">
+                                                    <rect key="frame" x="20" y="5" width="257" height="76"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIv-fL-Htk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="257" height="38"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XY-hi-Y5M">
+                                                            <rect key="frame" x="0.0" y="38" width="257" height="38"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WDZ-Vr-mup" firstAttribute="leading" secondItem="Joa-wY-Lsj" secondAttribute="leading" constant="20" id="2Bx-IF-lf1"/>
+                                                <constraint firstItem="zIs-Og-pVD" firstAttribute="leading" secondItem="WDZ-Vr-mup" secondAttribute="trailing" constant="20" id="2lw-YS-pws"/>
+                                                <constraint firstItem="zIs-Og-pVD" firstAttribute="top" secondItem="Joa-wY-Lsj" secondAttribute="top" constant="5" id="XxL-lW-c09"/>
+                                                <constraint firstAttribute="bottom" secondItem="zIs-Og-pVD" secondAttribute="bottom" constant="5" id="YhM-Na-XfK"/>
+                                                <constraint firstAttribute="trailing" secondItem="zIs-Og-pVD" secondAttribute="trailing" constant="20" id="acL-Vb-qNy"/>
+                                                <constraint firstAttribute="bottom" secondItem="WDZ-Vr-mup" secondAttribute="bottom" constant="5" id="dxr-fc-0dd"/>
+                                                <constraint firstItem="WDZ-Vr-mup" firstAttribute="top" secondItem="Joa-wY-Lsj" secondAttribute="top" constant="5" id="gwm-zN-pvQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8pn-i6-oVW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7hA-vY-7Ii"/>
+                            <constraint firstItem="8pn-i6-oVW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8ce-Nr-pkQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8pn-i6-oVW" secondAttribute="bottom" id="AXm-nS-3uM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8pn-i6-oVW" secondAttribute="trailing" id="UQG-bR-8Bw"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="oKx-NO-zRx"/>
+                    <connections>
+                        <outlet property="tableView" destination="8pn-i6-oVW" id="6QX-2h-vIQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="-27"/>
+            <point key="canvasLocation" x="1055.7251908396945" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZPT-Yh-SzI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NDB-cU-hOz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c6n-T0-p65">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zGf-K3-gcG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIo-CK-5kw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
+        <image name="pizza" width="500" height="500"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
