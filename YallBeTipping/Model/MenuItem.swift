@@ -11,5 +11,5 @@ struct MenuItem{
     let name:String
     let price: Double
     let img:String
-    let count:Int = 0
+    var count:Int = 0
 }

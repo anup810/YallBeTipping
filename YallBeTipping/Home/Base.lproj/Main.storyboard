@@ -34,36 +34,77 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WDZ-Vr-mup">
-                                                    <rect key="frame" x="20" y="5" width="257" height="76"/>
+                                                    <rect key="frame" x="20" y="5" width="217" height="76"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIv-fL-Htk">
-                                                            <rect key="frame" x="0.0" y="0.0" width="257" height="38"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="217" height="38"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.50" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XY-hi-Y5M">
-                                                            <rect key="frame" x="0.0" y="38" width="257" height="38"/>
+                                                            <rect key="frame" x="0.0" y="38" width="217" height="38"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NUP-gV-rZn">
+                                                    <rect key="frame" x="247" y="5" width="40" height="76"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNt-g7-XJM">
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="27.666666666666668"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="didTapPlusButton:" destination="gxE-My-wDq" eventType="touchUpInside" id="uHe-aP-WF7"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-Pd-yX9">
+                                                            <rect key="frame" x="13.666666666666686" y="27.666666666666664" width="13" height="20.666666666666664"/>
+                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7W8-mX-vxe">
+                                                            <rect key="frame" x="0.0" y="48.333333333333336" width="40" height="27.666666666666664"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="didTaoMinusButton:" destination="gxE-My-wDq" eventType="touchUpInside" id="vfp-7u-VC5"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="lK3-fc-PvG"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="WDZ-Vr-mup" firstAttribute="leading" secondItem="Joa-wY-Lsj" secondAttribute="leading" constant="20" id="2Bx-IF-lf1"/>
-                                                <constraint firstItem="zIs-Og-pVD" firstAttribute="leading" secondItem="WDZ-Vr-mup" secondAttribute="trailing" constant="20" id="2lw-YS-pws"/>
+                                                <constraint firstItem="NUP-gV-rZn" firstAttribute="top" secondItem="Joa-wY-Lsj" secondAttribute="top" constant="5" id="4pa-V5-hsg"/>
+                                                <constraint firstAttribute="bottom" secondItem="NUP-gV-rZn" secondAttribute="bottom" constant="5" id="Bdm-Su-Wuq"/>
                                                 <constraint firstItem="zIs-Og-pVD" firstAttribute="top" secondItem="Joa-wY-Lsj" secondAttribute="top" constant="5" id="XxL-lW-c09"/>
                                                 <constraint firstAttribute="bottom" secondItem="zIs-Og-pVD" secondAttribute="bottom" constant="5" id="YhM-Na-XfK"/>
+                                                <constraint firstItem="zIs-Og-pVD" firstAttribute="leading" secondItem="NUP-gV-rZn" secondAttribute="trailing" constant="10" id="aHW-bL-zyp"/>
                                                 <constraint firstAttribute="trailing" secondItem="zIs-Og-pVD" secondAttribute="trailing" constant="20" id="acL-Vb-qNy"/>
                                                 <constraint firstAttribute="bottom" secondItem="WDZ-Vr-mup" secondAttribute="bottom" constant="5" id="dxr-fc-0dd"/>
                                                 <constraint firstItem="WDZ-Vr-mup" firstAttribute="top" secondItem="Joa-wY-Lsj" secondAttribute="top" constant="5" id="gwm-zN-pvQ"/>
+                                                <constraint firstItem="NUP-gV-rZn" firstAttribute="leading" secondItem="WDZ-Vr-mup" secondAttribute="trailing" constant="10" id="s9G-wx-4zw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="countLabel" destination="rEp-Pd-yX9" id="egm-SY-vVA"/>
                                             <outlet property="img" destination="zIs-Og-pVD" id="Bk8-kX-G5W"/>
+                                            <outlet property="minusButton" destination="7W8-mX-vxe" id="sDJ-hc-96H"/>
                                             <outlet property="nameLabel" destination="mIv-fL-Htk" id="dT9-qT-cDM"/>
+                                            <outlet property="orderCountStackView" destination="NUP-gV-rZn" id="QKg-S3-dI9"/>
+                                            <outlet property="plusButton" destination="RNt-g7-XJM" id="Kjy-rm-Wz2"/>
                                             <outlet property="priceLabel" destination="8XY-hi-Y5M" id="PPd-GA-EwR"/>
                                         </connections>
                                     </tableViewCell>
@@ -108,7 +149,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="minus" catalog="system" width="128" height="26"/>
         <image name="pizza" width="500" height="500"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
