@@ -120,7 +120,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8pn-i6-oVW" secondAttribute="trailing" id="UQG-bR-8Bw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oKx-NO-zRx"/>
+                    <navigationItem key="navigationItem" id="oKx-NO-zRx">
+                        <barButtonItem key="rightBarButtonItem" image="cart" catalog="system" id="hTJ-Jd-IMn">
+                            <connections>
+                                <action selector="didTapCartButton:" destination="BYZ-38-t0r" id="4kH-Ye-h3x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="8pn-i6-oVW" id="6QX-2h-vIQ"/>
                     </connections>
@@ -149,6 +155,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="pizza" width="500" height="500"/>
         <image name="plus" catalog="system" width="128" height="113"/>

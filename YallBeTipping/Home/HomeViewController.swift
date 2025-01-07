@@ -27,6 +27,29 @@ class HomeViewController: UIViewController{
         tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    @IBAction func didTapCartButton(_ sender: UIBarButtonItem) {
+        let storyBoard = UIStoryboard(name: "ConfirmVC", bundle: nil)
+        let items:[MenuItem] = getMenuItems()
+        let vc = storyBoard.instantiateViewController(identifier: "ConfirmVC") { coder in
+            let ConfirmVC = ConfirmVC(coder: coder, items: items)
+            return ConfirmVC
+        }
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    func getMenuItems() -> [MenuItem]{
+        var items:[MenuItem] = []
+        for item in data{
+            if item.count > 0{
+                items.append(item)
+            }
+            
+        }
+        return items
+    }
+    
+    
 }
 
 extension HomeViewController: UITableViewDataSource{
@@ -67,8 +90,5 @@ extension HomeViewController: HomeTableCellDelegate{
         data[indexPath.row].count -= 1
         tableView.reloadRows(at: [indexPath], with: .none )
     }
-    
-  
-    
 
 }
