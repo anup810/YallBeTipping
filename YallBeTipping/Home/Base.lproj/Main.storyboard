@@ -61,6 +61,11 @@
                                                 <constraint firstItem="WDZ-Vr-mup" firstAttribute="top" secondItem="Joa-wY-Lsj" secondAttribute="top" constant="5" id="gwm-zN-pvQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img" destination="zIs-Og-pVD" id="Bk8-kX-G5W"/>
+                                            <outlet property="nameLabel" destination="mIv-fL-Htk" id="dT9-qT-cDM"/>
+                                            <outlet property="priceLabel" destination="8XY-hi-Y5M" id="PPd-GA-EwR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
