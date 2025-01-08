@@ -8,7 +8,12 @@
 import UIKit
 
 class ConfirmVC: UIViewController {
-    let items: [MenuItem]
+    var items: [MenuItem]
+    
+    lazy var barButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "Submit", style: .plain, target:self, action: #selector(didTapBarButton))
+        return button
+    }()
     
     @IBOutlet weak var tableView: UITableView!
     init(coder:NSCoder,items:[MenuItem]){
@@ -23,14 +28,27 @@ class ConfirmVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Confirm"
         setupTableView()
+        navigationItem.rightBarButtonItem = barButton
 
-        print(items)
+
+        
     }
     func setupTableView(){
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "ConfirmCell", bundle: nil), forCellReuseIdentifier: "ConfirmCell")
+        
+    }
+    @objc func didTapBarButton(){
+        let storyBoard = UIStoryboard(name: "TipVC", bundle: nil)
+        let vc = storyBoard.instantiateViewController(identifier: "TipVC") {[unowned self] coder in
+            let TipVC = TipVC(coder: coder, items: items)
+            return TipVC
+        }
+        navigationController?.pushViewController(vc, animated: true)
+        
         
     }
 
@@ -59,11 +77,13 @@ extension ConfirmVC: UITableViewDelegate{
 }
 extension ConfirmVC: ConfirmCellDelegate{
     func didAdd(at indexPath: IndexPath) {
-        //
+        items[indexPath.row].count += 1
+        tableView.reloadRows(at: [indexPath], with: .none)
     }
     
     func didMinus(at indexPath: IndexPath) {
-        //
+        items[indexPath.row].count -= 1
+        tableView.reloadRows(at: [indexPath], with: .none )
     }
     
     
