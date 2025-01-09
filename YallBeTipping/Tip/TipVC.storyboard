@@ -85,7 +85,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="largeTipButton" destination="ACq-Yn-fqU" id="glx-eP-BlA"/>
+                        <outlet property="mediumTipButton" destination="Xw6-NK-27U" id="l2E-qg-rRR"/>
                         <outlet property="skipButton" destination="rzA-yT-Vcs" id="h8X-A6-Nwe"/>
+                        <outlet property="smallTipButton" destination="HQz-Zx-NQ9" id="o2t-BD-KQe"/>
                         <outlet property="stackView" destination="X00-7s-abq" id="jaN-JO-UDe"/>
                     </connections>
                 </viewController>
