@@ -15,9 +15,79 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzA-yT-Vcs">
+                                <rect key="frame" x="20" y="758" width="353" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Bgt-GF-lvn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapSkipButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XYk-B0-RXJ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="X00-7s-abq">
+                                <rect key="frame" x="20" y="64" width="353" height="674"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQz-Zx-NQ9">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="198.66666666666666"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="10%">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="75"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapSmallTipButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aqb-Gq-Sbj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xw6-NK-27U">
+                                        <rect key="frame" x="0.0" y="218.66666666666669" width="353" height="198.66666666666669"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="20%">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="75"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapMediumTopButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RP2-HI-tPn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACq-Yn-fqU">
+                                        <rect key="frame" x="0.0" y="437.33333333333331" width="353" height="236.66666666666669"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="22%">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="75"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapLargeTipButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="c6E-VZ-zYh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rzA-yT-Vcs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="8Pp-Lj-krS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="X00-7s-abq" secondAttribute="trailing" constant="20" id="FsW-Js-704"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rzA-yT-Vcs" secondAttribute="trailing" constant="20" id="GiV-PL-8GJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="rzA-yT-Vcs" secondAttribute="bottom" constant="10" id="gnA-3l-7JV"/>
+                            <constraint firstItem="rzA-yT-Vcs" firstAttribute="top" secondItem="X00-7s-abq" secondAttribute="bottom" constant="20" id="j98-t2-2JL"/>
+                            <constraint firstItem="X00-7s-abq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="mEq-kE-rpW"/>
+                            <constraint firstItem="X00-7s-abq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="sNt-kB-brb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="skipButton" destination="rzA-yT-Vcs" id="h8X-A6-Nwe"/>
+                        <outlet property="stackView" destination="X00-7s-abq" id="jaN-JO-UDe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,6 +97,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
