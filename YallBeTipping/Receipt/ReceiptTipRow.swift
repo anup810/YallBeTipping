@@ -9,6 +9,7 @@ import UIKit
 
 class ReceiptTipRow: UITableViewCell {
 
+    @IBOutlet weak var tipLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,7 +18,9 @@ class ReceiptTipRow: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+    }
+    func configure(tip: TipOption){
+        tipLabel.text = tip.toString()
     }
 
 }

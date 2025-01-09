@@ -9,8 +9,12 @@ import UIKit
 
 class ReceiptVC: UIViewController {
     let items: [MenuItem]
-    init(coder: NSCoder, items:[MenuItem]){
+    let tip : TipOption
+    let total: Double
+    init(coder: NSCoder, items:[MenuItem], tip: TipOption){
         self.items = items
+        self.tip = tip
+        self.total = items.calculateTotal(with: tip)
         super.init(coder: coder)!
     
     }
@@ -40,10 +44,24 @@ extension ReceiptVC : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let row = indexPath.row
+        if row < items.count{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiptItemRow") as! ReceiptItemRow
+            let item = items[row]
+            cell.configure(item: item)
+            return cell
+        }else if row == items.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiptTipRow") as! ReceiptTipRow
+            cell.configure(tip: tip)
+            return cell
+            
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiptTotalRow") as! ReceiptTotalRow
+            cell.configure(total: total)
+            return cell
+        }
     }
-    
-    
+ 
 }
 extension ReceiptVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -58,7 +58,7 @@ class TipVC: UIViewController {
     @objc func didTapBarButton(){
         let storyBoard = UIStoryboard(name: "ReceiptVC", bundle: nil)
         let vc = storyBoard.instantiateViewController(identifier: "ReceiptVC") {[unowned self] coder in
-            let ReceiptVC = ReceiptVC(coder: coder, items: items)
+            let ReceiptVC = ReceiptVC(coder: coder, items: items, tip: tipAmount)
             return ReceiptVC
         }
         navigationController?.pushViewController(vc, animated: true)

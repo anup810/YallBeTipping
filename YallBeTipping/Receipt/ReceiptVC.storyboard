@@ -64,6 +64,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="1rs-9A-Ks6" secondAttribute="trailing" constant="20" id="K02-Kz-fjv"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countLabel" destination="l9v-35-RCq" id="KL4-9e-nWN"/>
+                                            <outlet property="nameLabel" destination="bK3-Xp-waK" id="cDy-3C-jfe"/>
+                                            <outlet property="priceLabel" destination="lMh-9i-Mbg" id="b9W-HU-OfJ"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceiptTipRow" rowHeight="47" id="eNA-fy-5Xm" customClass="ReceiptTipRow" customModule="YallBeTipping" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130" width="393" height="47"/>
@@ -97,6 +102,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="XRk-db-PXg" secondAttribute="bottom" constant="5" id="lGz-8Z-L3G"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tipLabel" destination="Ul3-O4-PUB" id="kGx-pW-nV9"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceiptTotalRow" rowHeight="60" id="oBg-An-2DN" customClass="ReceiptTotalRow" customModule="YallBeTipping" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="177" width="393" height="60"/>
@@ -130,6 +138,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="jn4-lS-DLK" secondAttribute="bottom" constant="5" id="umw-CX-Pei"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="totalLabel" destination="pu7-VO-xhz" id="Xpx-f7-qrZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

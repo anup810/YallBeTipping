@@ -8,16 +8,26 @@
 import UIKit
 
 class ReceiptItemRow: UITableViewCell {
-
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+       
+    }
+    func configure(item: MenuItem){
+        nameLabel.text = item.name
+        countLabel.text = "\(item.count)"
+        let count = Double(item.count)
+        let totalPrice = item.price * count
+        priceLabel.text = "\(totalPrice)"
+        
     }
 
 }
